@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//testing
+import HelloWorldList from './HelloWorldList';
+
 import TodoApp from './components/TodoApp';
 
 class App extends Component {
@@ -9,6 +12,7 @@ class App extends Component {
 		return (
 			<div>
 				<TodoApp />
+				<HelloWorldList />
 			</div>
 		);
 	}
