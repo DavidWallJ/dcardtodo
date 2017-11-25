@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 
 class TodoList extends Component {
-	render() {
+	renderTodos = () => {
 		const { todos } = this.props;
-		const renderTodos = () => {
-			return todos.map(todo => {
-				return <TodoItem key={todo.id} {...todo} />;
-			});
-		};
+		return todos.map(todo => {
+			return <TodoItem key={todo.id} {...todo} />;
+		});
+	};
+	render() {
 		return (
 			<div>
-				{renderTodos()}
+				{this.renderTodos()}
 			</div>
 		);
 	}

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class TodoApp extends _react.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			todos: [
+			{
+				id: 1,
+				text: 'Talk the talk' },
+
+			{
+				id: 2,
+				text: 'Walk the walk' },
+
+			{
+				id: 3,
+				text: 'Water the cat' },
+
+			{
+				id: 4,
+				text: 'Buy water for cat' }] };
+
+
+
+	}
+	render() {
+		var { todos } = this.state;
+		return _react2.default.createElement(_TodoList2.default, { todos: todos, __source: { fileName: _jsxFileName, lineNumber: 30 }, __self: this });
+	}} should exist 1`] = `
+<div>
+  <div>
+    <p>
+      1
+      . 
+      Talk the talk
+    </p>
+  </div>
+  <div>
+    <p>
+      2
+      . 
+      Walk the walk
+    </p>
+  </div>
+  <div>
+    <p>
+      3
+      . 
+      Water the cat
+    </p>
+  </div>
+  <div>
+    <p>
+      4
+      . 
+      Buy water for cat
+    </p>
+  </div>
+</div>
+`;

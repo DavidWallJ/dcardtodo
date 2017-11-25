@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class TodoList extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		renderTodos = () => {
+			const { todos } = this.props;
+			return todos.map(todo => {
+				return _react2.default.createElement(_TodoItem2.default, Object.assign({ key: todo.id }, todo, { __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: this }));
+			});
+		}, _temp;}
+	render() {
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 14 }, __self: this },
+				this.renderTodos()));
+
+
+	}} should exist 1`] = `
+<div>
+  <div>
+    <p>
+      1
+      . 
+      Walk the walk
+    </p>
+  </div>
+  <div>
+    <p>
+      2
+      . 
+      Talk the talk
+    </p>
+  </div>
+  <div>
+    <p>
+      3
+      . 
+      Walk the cat
+    </p>
+  </div>
+</div>
+`;

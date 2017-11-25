@@ -31,15 +31,15 @@ describe(HelloWorldList, () => {
 		const after = component.find(HelloWorld).length;
 		expect(after).toBeGreaterThan(before);
 	});
-});
 
-it('removes a greeting from the list when the remove greeting function is called', () => {
-	const before = component.find(HelloWorld).length;
-	const removeMe = component.state('greetings')[0];
-	component.instance().removeGreeting(removeMe);
-	component.update();
-	const after = component.find(HelloWorld).length;
-	expect(after).toBeLessThan(before);
+	it('removes a greeting from the list when the remove greeting function is called', () => {
+		const before = component.find(HelloWorld).length;
+		const removeMe = component.state('greetings')[0];
+		component.instance().removeGreeting(removeMe);
+		component.update();
+		const after = component.find(HelloWorld).length;
+		expect(after).toBeLessThan(before);
+	});
 });
 
 // https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-4-9f843c8c1ccc

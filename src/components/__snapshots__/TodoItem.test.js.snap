@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class TodoItem extends _react.Component {
+	render() {
+		const { text, id } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 7 }, __self: this },
+				_react2.default.createElement('p', { __source: { fileName: _jsxFileName, lineNumber: 8 }, __self: this },
+					id, '. ', text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <p>
+    . 
+  </p>
+</div>
+`;

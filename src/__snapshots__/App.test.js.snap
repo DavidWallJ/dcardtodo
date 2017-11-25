@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class App extends _react.Component {
+	render() {
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: this },
+				_react2.default.createElement(_TodoApp2.default, { __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: this })));
+
+
+	}} should exist 1`] = `
+<div>
+  <div>
+    <div>
+      <p>
+        1
+        . 
+        Talk the talk
+      </p>
+    </div>
+    <div>
+      <p>
+        2
+        . 
+        Walk the walk
+      </p>
+    </div>
+    <div>
+      <p>
+        3
+        . 
+        Water the cat
+      </p>
+    </div>
+    <div>
+      <p>
+        4
+        . 
+        Buy water for cat
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -2,13 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
-import App from './App';
+import TodoItem from './TodoItem';
 
-describe(App, () => {
-	const component = shallow(<App />);
+describe(TodoItem, () => {
+	const component = shallow(<TodoItem />);
 
 	it('should exist', () => {
-		const component = renderer.create(<App />);
+		const component = renderer.create(<TodoItem />);
 		const tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
