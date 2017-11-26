@@ -20,11 +20,7 @@ class TodoSearch extends Component {
 						inputRef={input => (this.searchInput = input)}
 						onChange={this.handleSearch}
 					/>
-					<Checkbox
-						checked={this.props.checked}
-						// inputRef={input => (this.showCompleted = input)}
-						onChange={this.handleSearch}
-					>
+					<Checkbox checked={this.props.checked} onChange={this.handleSearch}>
 						Show completed todos
 					</Checkbox>
 				</FormGroup>
