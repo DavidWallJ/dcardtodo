@@ -1,23 +1,39 @@
 import React, { Component } from 'react';
+import { Button, FormGroup, FormControl } from 'react-bootstrap';
 
 class AddTodo extends Component {
+	constructor() {
+		super();
+
+		this.state = { todoText: '' };
+	}
 	handleSubmit = e => {
 		e.preventDefault();
-		const todoText = this.refs.todoText.value;
 
-		if (todoText.length > 0) {
-			this.refs.todoText.value = '';
-			this.props.onAddTodo(todoText);
+		if (this.state.todoText.length > 0) {
+			this.setState({ todoText: '' });
+			this.props.onAddTodo(this.state.todoText);
 		} else {
 			// puts cursor back in text input field if no text exists on submit
-			this.refs.todoText.focus();
+			this.todoTextRef.focus();
 		}
 	};
 	render() {
 		return (
 			<form onSubmit={this.handleSubmit}>
-				<input type="text" ref="todoText" placeholder="...add your todo here" />
-				<button className="button expanded">Add Todo</button>
+				<FormGroup>
+					<FormControl
+						className="todoInput"
+						type="text"
+						placeholder="...add your todo here"
+						onChange={event => this.setState({ todoText: event.target.value })}
+						// ref to move cursor back to if field is empty when submitted
+						inputRef={input => (this.todoTextRef = input)}
+					/>
+					<Button bsStyle="primary" bsSize="large" type="submit" block>
+						Add Todo
+					</Button>
+				</FormGroup>
 			</form>
 		);
 	}

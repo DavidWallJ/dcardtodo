@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-
+import { Panel } from 'react-bootstrap';
 import TodoList from './TodoList';
 import AddTodo from './AddTodo';
+import TodoSearch from './TodoSearch';
 
 class TodoApp extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			showCompleted: false,
+			searchInput: '',
 			todos: [
 				{
 					id: 1,
@@ -28,16 +31,22 @@ class TodoApp extends Component {
 		};
 	}
 	handleAddTodo = text => {
-		console.log(text);
-		alert('new todo: ' + text);
+		alert('New todo: ' + text);
+	};
+	handleSearch = (searchInput, showCompleted) => {
+		this.setState({
+			searchInput: searchInput.toLowerCase(),
+			showCompleted
+		});
 	};
 	render() {
 		var { todos } = this.state;
 		return (
-			<div>
+			<Panel header="Dcard Todo Application">
+				<TodoSearch onSearch={this.handleSearch} />
 				<TodoList todos={todos} />
 				<AddTodo onAddTodo={this.handleAddTodo} />
-			</div>
+			</Panel>
 		);
 	}
 }
