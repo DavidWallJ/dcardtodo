@@ -2,22 +2,13 @@ import React, { Component } from 'react';
 import { Button, FormGroup, FormControl, Checkbox } from 'react-bootstrap';
 
 class TodoSearch extends Component {
-	constructor() {
-		super();
-		this.state = { checkboxChecked: false };
-	}
-
-	handleSearch = () => {
+	handleSearch = e => {
 		const searchInput = this.searchInput.value;
-		const showCompleted = this.state.checkboxChecked;
-
+		const showCompleted = e.target.checked;
+		console.log(searchInput, showCompleted);
 		// passed down from parent component
 		this.props.onSearch(searchInput, showCompleted);
 	};
-
-	handleCheckbox(e) {
-		this.setState({ checkboxChecked: e.target.checked });
-	}
 
 	render() {
 		return (
@@ -30,9 +21,9 @@ class TodoSearch extends Component {
 						onChange={this.handleSearch}
 					/>
 					<Checkbox
-						checked={this.state.checkboxChecked}
+						checked={this.props.checked}
 						// inputRef={input => (this.showCompleted = input)}
-						onChange={this.handleCheckbox.bind(this)}
+						onChange={this.handleSearch}
 					>
 						Show completed todos
 					</Checkbox>

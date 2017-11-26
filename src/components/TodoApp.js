@@ -36,14 +36,18 @@ class TodoApp extends Component {
 	handleSearch = (searchInput, showCompleted) => {
 		this.setState({
 			searchInput: searchInput.toLowerCase(),
-			showCompleted
+			showCompleted: showCompleted
 		});
 	};
+
 	render() {
 		var { todos } = this.state;
 		return (
 			<Panel header="Dcard Todo Application">
-				<TodoSearch onSearch={this.handleSearch} />
+				<TodoSearch
+					onSearch={this.handleSearch}
+					checked={this.state.showCompleted}
+				/>
 				<TodoList todos={todos} />
 				<AddTodo onAddTodo={this.handleAddTodo} />
 			</Panel>
