@@ -20,19 +20,44 @@ exports[`class TodoApp extends _react.Component {
 
 
 
-
-
-
-
 		handleAddTodo = text => {
-			alert('New todo: ' + text);
-		};this.state = { todos: [{ id: 1, text: 'Talk the talk' }, { id: 2, text: 'Walk the walk' }, { id: 3, text: 'Water the cat' }, { id: 4, text: 'Buy water for cat' }] };}
+			this.setState({
+				todos: [
+				...this.state.todos,
+				{
+					id: (0, _nodeUuid2.default)(),
+					text,
+					completed: false }] });
+
+
+
+		};this.
+
+		handleSearch = searchInput => {
+			console.log('handleSearch: ', searchInput);
+			this.setState({
+				searchInput: searchInput.toLowerCase() });
+
+		};this.
+
+		handleCheckbox = showCompleted => {
+			console.log('handleCheckbox: ', showCompleted);
+			this.setState({
+				showCompleted: showCompleted });
+
+		};this.state = { showCompleted: false, searchInput: '', todos: [{ id: (0, _nodeUuid2.default)(), text: 'Talk the talk', completed: false }, { id: (0, _nodeUuid2.default)(), text: 'Walk the walk', completed: true }] };}
+
 	render() {
 		var { todos } = this.state;
 		return (
-			_react2.default.createElement(_reactBootstrap.Panel, { header: 'Dcard Todo Application', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
-				_react2.default.createElement(_TodoList2.default, { todos: todos, __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
-				_react2.default.createElement(_AddTodo2.default, { onAddTodo: this.handleAddTodo, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this })));
+			_react2.default.createElement(_reactBootstrap.Panel, { header: 'Dcard Todo Application', __source: { fileName: _jsxFileName, lineNumber: 58 }, __self: this },
+				_react2.default.createElement(_TodoSearch2.default, {
+					onSearch: this.handleSearch,
+					onCheckbox: this.handleCheckbox,
+					checked: this.state.showCompleted, __source: { fileName: _jsxFileName, lineNumber: 59 }, __self: this }),
+
+				_react2.default.createElement(_TodoList2.default, { todos: todos, __source: { fileName: _jsxFileName, lineNumber: 64 }, __self: this }),
+				_react2.default.createElement(_AddTodo2.default, { onAddTodo: this.handleAddTodo, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this })));
 
 
 	}} should exist 1`] = `
@@ -48,33 +73,76 @@ exports[`class TodoApp extends _react.Component {
   <div
     className="panel-body"
   >
+    <form>
+      <div
+        className="form-group"
+      >
+        <input
+          className="todoSearchInput form-control"
+          id={undefined}
+          onChange={[Function]}
+          placeholder="Search"
+          type="search"
+        />
+        <div
+          className="checkbox"
+          style={undefined}
+        >
+          <label
+            title=""
+          >
+            <input
+              checked={false}
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            Show completed todos
+          </label>
+        </div>
+      </div>
+    </form>
     <div>
       <div>
         <p>
-          1
-          . 
+          <div
+            className="checkbox"
+            style={undefined}
+          >
+            <label
+              title=""
+            >
+              <input
+                checked={false}
+                disabled={false}
+                onChange={undefined}
+                type="checkbox"
+              />
+              Show completed todos
+            </label>
+          </div>
           Talk the talk
         </p>
       </div>
       <div>
         <p>
-          2
-          . 
+          <div
+            className="checkbox"
+            style={undefined}
+          >
+            <label
+              title=""
+            >
+              <input
+                checked={true}
+                disabled={false}
+                onChange={undefined}
+                type="checkbox"
+              />
+              Show completed todos
+            </label>
+          </div>
           Walk the walk
-        </p>
-      </div>
-      <div>
-        <p>
-          3
-          . 
-          Water the cat
-        </p>
-      </div>
-      <div>
-        <p>
-          4
-          . 
-          Buy water for cat
         </p>
       </div>
     </div>

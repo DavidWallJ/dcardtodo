@@ -17,22 +17,64 @@ exports[`class TodoList extends _react.Component {constructor(...args) {var _tem
 <div>
   <div>
     <p>
-      1
-      . 
+      <div
+        className="checkbox"
+        style={undefined}
+      >
+        <label
+          title=""
+        >
+          <input
+            checked={undefined}
+            disabled={false}
+            onChange={undefined}
+            type="checkbox"
+          />
+          Show completed todos
+        </label>
+      </div>
       Walk the walk
     </p>
   </div>
   <div>
     <p>
-      2
-      . 
+      <div
+        className="checkbox"
+        style={undefined}
+      >
+        <label
+          title=""
+        >
+          <input
+            checked={undefined}
+            disabled={false}
+            onChange={undefined}
+            type="checkbox"
+          />
+          Show completed todos
+        </label>
+      </div>
       Talk the talk
     </p>
   </div>
   <div>
     <p>
-      3
-      . 
+      <div
+        className="checkbox"
+        style={undefined}
+      >
+        <label
+          title=""
+        >
+          <input
+            checked={undefined}
+            disabled={false}
+            onChange={undefined}
+            type="checkbox"
+          />
+          Show completed todos
+        </label>
+      </div>
       Walk the cat
     </p>
   </div>

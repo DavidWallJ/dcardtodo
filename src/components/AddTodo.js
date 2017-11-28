@@ -20,7 +20,7 @@ class AddTodo extends Component {
 	};
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form onSubmit={this.handleSubmit.bind(this)}>
 				<FormGroup>
 					<FormControl
 						className="todoInput"

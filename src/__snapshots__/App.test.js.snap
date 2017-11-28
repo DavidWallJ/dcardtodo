@@ -21,33 +21,76 @@ exports[`class App extends _react.Component {
     <div
       className="panel-body"
     >
+      <form>
+        <div
+          className="form-group"
+        >
+          <input
+            className="todoSearchInput form-control"
+            id={undefined}
+            onChange={[Function]}
+            placeholder="Search"
+            type="search"
+          />
+          <div
+            className="checkbox"
+            style={undefined}
+          >
+            <label
+              title=""
+            >
+              <input
+                checked={false}
+                disabled={false}
+                onChange={[Function]}
+                type="checkbox"
+              />
+              Show completed todos
+            </label>
+          </div>
+        </div>
+      </form>
       <div>
         <div>
           <p>
-            1
-            . 
+            <div
+              className="checkbox"
+              style={undefined}
+            >
+              <label
+                title=""
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  onChange={undefined}
+                  type="checkbox"
+                />
+                Show completed todos
+              </label>
+            </div>
             Talk the talk
           </p>
         </div>
         <div>
           <p>
-            2
-            . 
+            <div
+              className="checkbox"
+              style={undefined}
+            >
+              <label
+                title=""
+              >
+                <input
+                  checked={true}
+                  disabled={false}
+                  onChange={undefined}
+                  type="checkbox"
+                />
+                Show completed todos
+              </label>
+            </div>
             Walk the walk
-          </p>
-        </div>
-        <div>
-          <p>
-            3
-            . 
-            Water the cat
-          </p>
-        </div>
-        <div>
-          <p>
-            4
-            . 
-            Buy water for cat
           </p>
         </div>
       </div>

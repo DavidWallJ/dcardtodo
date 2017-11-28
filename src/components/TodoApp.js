@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Panel } from 'react-bootstrap';
+import uuid from 'node-uuid';
 import TodoList from './TodoList';
 import AddTodo from './AddTodo';
 import TodoSearch from './TodoSearch';
@@ -12,32 +13,54 @@ class TodoApp extends Component {
 			searchInput: '',
 			todos: [
 				{
-					id: 1,
-					text: 'Talk the talk'
+					id: uuid(),
+					text: 'Talk the talk',
+					completed: false
 				},
 				{
-					id: 2,
-					text: 'Walk the walk'
-				},
-				{
-					id: 3,
-					text: 'Water the cat'
-				},
-				{
-					id: 4,
-					text: 'Buy water for cat'
+					id: uuid(),
+					text: 'Walk the walk',
+					completed: true
 				}
 			]
 		};
 	}
 	handleAddTodo = text => {
-		alert('New todo: ' + text);
-	};
-	handleSearch = (searchInput, showCompleted) => {
 		this.setState({
-			searchInput: searchInput.toLowerCase(),
+			todos: [
+				...this.state.todos,
+				{
+					id: uuid(),
+					text,
+					completed: false
+				}
+			]
+		});
+	};
+
+	handleSearch = searchInput => {
+		console.log('handleSearch: ', searchInput);
+		this.setState({
+			searchInput: searchInput.toLowerCase()
+		});
+	};
+
+	handleCheckbox = showCompleted => {
+		console.log('handleCheckbox: ', showCompleted);
+		this.setState({
 			showCompleted: showCompleted
 		});
+	};
+
+	handleToggle = id => {
+		const updatedTodos = this.state.todos.map(todo => {
+			if (todo.id === id) {
+				todo.completed = !todo.completed;
+			}
+			return todo;
+		});
+
+		this.setState({ todos: updatedTodos });
 	};
 
 	render() {
@@ -46,9 +69,10 @@ class TodoApp extends Component {
 			<Panel header="Dcard Todo Application">
 				<TodoSearch
 					onSearch={this.handleSearch}
+					onCheckbox={this.handleCheckbox}
 					checked={this.state.showCompleted}
 				/>
-				<TodoList todos={todos} />
+				<TodoList todos={todos} onToggle={this.handleToggle} />
 				<AddTodo onAddTodo={this.handleAddTodo} />
 			</Panel>
 		);
