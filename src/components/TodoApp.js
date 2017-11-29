@@ -60,7 +60,12 @@ class TodoApp extends Component {
 	};
 
 	render() {
-		var { todos } = this.state;
+		const { todos, showCompleted, searchInput } = this.state;
+		const filteredTodos = TodoAPI.filterTodos(
+			todos,
+			showCompleted,
+			searchInput
+		);
 		return (
 			<Panel header="Dcard Todo Application">
 				<TodoSearch
@@ -68,7 +73,7 @@ class TodoApp extends Component {
 					onCheckbox={this.handleCheckbox}
 					checked={this.state.showCompleted}
 				/>
-				<TodoList todos={todos} onToggle={this.handleToggle} />
+				<TodoList todos={filteredTodos} onToggle={this.handleToggle} />
 				<AddTodo onAddTodo={this.handleAddTodo} />
 			</Panel>
 		);
