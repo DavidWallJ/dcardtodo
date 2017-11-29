@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Panel } from 'react-bootstrap';
 import uuid from 'node-uuid';
+import moment from 'moment';
 
 import TodoAPI from '../api/TodoAPI';
 import TodoList from './TodoList';
@@ -28,7 +29,9 @@ class TodoApp extends Component {
 				{
 					id: uuid(),
 					text,
-					completed: false
+					completed: false,
+					createdAt: moment().unix(),
+					completedAt: undefined
 				}
 			]
 		});
@@ -52,6 +55,8 @@ class TodoApp extends Component {
 		const updatedTodos = this.state.todos.map(todo => {
 			if (todo.id === id) {
 				todo.completed = !todo.completed;
+				// set completedAt date if todo.completed is true
+				todo.completedAt = todo.completed ? moment().unix() : undefined;
 			}
 			return todo;
 		});

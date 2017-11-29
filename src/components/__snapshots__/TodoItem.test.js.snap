@@ -1,37 +1,653 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`class TodoItem extends _react.Component {
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, _temp;}
 	render() {
 		const { text, id, completed } = this.props;
 		return (
-			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 8 }, __self: this },
-				_react2.default.createElement('p', { __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: this },
-					_react2.default.createElement(_reactBootstrap.Checkbox, { checked: completed, onChange: this.handleCheckbox, __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: this }, 'Show completed todos'),
-
-
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: this },
 					text)));
 
 
 
 	}} should exist 1`] = `
 <div>
-  <p>
-    <div
-      className="checkbox"
-      style={undefined}
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
     >
-      <label
-        title=""
-      >
-        <input
-          checked={undefined}
-          disabled={false}
-          onChange={undefined}
-          type="checkbox"
-        />
-        Show completed todos
-      </label>
-    </div>
-  </p>
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, _temp;}
+
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, _temp;}
+
+	renderDate(createdAt) {}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 14 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, _temp;}
+
+
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 14 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = () => {}, _temp;}
+
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 14 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = (createdAt, completedAt) => {
+			const message = 'Created';
+			const timestamp = createdAt;
+
+			return (
+				message + ' ' + _moment2.default.unix(timestamp).format('MMM Do YYYY @ h:mm a'));
+
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt, completedAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this },
+					text, ' ', this.renderDate(createdAt, completedAt))));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+       
+      Created Invalid date
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = (createdAt, completedAt, completed) => {
+			let message = 'Created: ';
+			let timestamp = createdAt;
+
+			if (completed) {
+				message = 'Completed: ';
+				timestamp = completedAt;
+			}
+
+			return message + _moment2.default.unix(timestamp).format('MMM Do YYYY @ h:mm a');
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt, completedAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this },
+					text, ' ', this.renderDate(createdAt, completedAt, completed))));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+       
+      Created: Invalid date
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = createdAt => {
+			const message = 'Created';
+			const timestamp = createdAt;
+
+			return (
+				message + ' ' + _moment2.default.unix(timestamp).format('MMM Do YYYY @ h:mm a'));
+
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this },
+					text, ' ', this.renderDate(createdAt))));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+       
+      Created Invalid date
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = createdAt => {
+			const message = 'Created';
+			const timestamp = createdAt;
+
+			return message + _moment2.default.unix(timestamp).format('MMM Do YYYY @ h:mm a');
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this },
+					text,
+					this.renderDate(createdAt))));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      CreatedInvalid date
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = createdAt => {
+			const message = 'Created';
+			const timestamp = createdAt;
+
+			return message + _moment2.default.unix(timestamp).format('MMM Do YYYY @ h:mm a');
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this },
+					text, ' ', this.renderDate(createdAt))));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+       
+      CreatedInvalid date
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = createdAt => {
+			const message = 'Created';
+			const timestamp = createdAt;
+
+			return message + moment.unix(timestamp).format('MMM Do YYYY @ h:mm a');
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = createdAt => {
+			const message = 'Created';
+			const timestamp = createdAt;
+
+			return message + moment.unix(timestamp);
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = createdAt => {
+			const message = 'Created';
+			const timestamp = createdAt;
+
+			return;
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = createdAt => {
+			const message = 'Created';
+		}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 16 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+		handleOnClick = () => {
+			this.props.onToggle(this.props.id);
+		}, this.
+
+		renderDate = createdAt => {}, _temp;}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 14 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`class TodoItem extends _react.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+
+
+
+
+		renderDate = createdAt => {}, _temp;}handleOnClick() {this.props.onToggle(this.props.id);}
+	render() {
+		const { text, id, completed, createdAt } = this.props;
+		return (
+			_react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: this },
+				_react2.default.createElement(_reactBootstrap.Checkbox, { onChange: this.handleOnClick, checked: completed, __source: { fileName: _jsxFileName, lineNumber: 14 }, __self: this },
+					text)));
+
+
+
+	}} should exist 1`] = `
+<div>
+  <div
+    className="checkbox"
+    style={undefined}
+  >
+    <label
+      title=""
+    >
+      <input
+        checked={undefined}
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+  </div>
 </div>
 `;
