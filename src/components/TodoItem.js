@@ -8,8 +8,8 @@ class TodoItem extends Component {
 	render() {
 		const { text, id, completed } = this.props;
 		return (
-			<div onClick={this.handleOnClick}>
-				<Checkbox checked={completed}>
+			<div>
+				<Checkbox onChange={this.handleOnClick} checked={completed}>
 					{text}
 				</Checkbox>
 			</div>

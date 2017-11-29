@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Panel } from 'react-bootstrap';
 import uuid from 'node-uuid';
+
+import TodoAPI from '../api/TodoAPI';
 import TodoList from './TodoList';
 import AddTodo from './AddTodo';
 import TodoSearch from './TodoSearch';
@@ -11,20 +13,14 @@ class TodoApp extends Component {
 		this.state = {
 			showCompleted: false,
 			searchInput: '',
-			todos: [
-				{
-					id: uuid(),
-					text: 'Talk the talk',
-					completed: false
-				},
-				{
-					id: uuid(),
-					text: 'Walk the walk',
-					completed: true
-				}
-			]
+			todos: TodoAPI.getTodos()
 		};
 	}
+
+	componentDidUpdate = () => {
+		TodoAPI.setTodos(this.state.todos);
+	};
+
 	handleAddTodo = text => {
 		this.setState({
 			todos: [
