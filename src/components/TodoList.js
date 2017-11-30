@@ -10,8 +10,8 @@ class TodoList extends Component {
 		}
 		return todos.map(todo => {
 			return (
-				<ListGroupItem>
-					<TodoItem key={todo.id} {...todo} onToggle={this.props.onToggle} />
+				<ListGroupItem key={todo.id}>
+					<TodoItem {...todo} onToggle={this.props.onToggle} />
 				</ListGroupItem>
 			);
 		});

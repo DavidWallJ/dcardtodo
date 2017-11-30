@@ -13,6 +13,7 @@ class AddTodo extends Component {
 
 		if (this.state.todoText.length > 0) {
 			this.setState({ todoText: '' });
+			this.todoTextRef.value = '';
 			this.props.onAddTodo(this.state.todoText);
 		} else {
 			// puts cursor back in text input field if no text exists on submit

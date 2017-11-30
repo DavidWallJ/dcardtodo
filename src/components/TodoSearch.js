@@ -5,6 +5,7 @@ import { Button, FormGroup, FormControl, Checkbox } from 'react-bootstrap';
 class TodoSearch extends Component {
 	handleSearch = () => {
 		const searchInput = this.searchInput.value;
+		// this.searchInput.value = '';
 		// passed down from parent component
 		this.props.onSearch(searchInput);
 	};
