@@ -1,0 +1,11 @@
+.todoItem {
+	text-align: left;
+}
+
+.todoTextSpan {
+	font-size: 17px;
+}
+
+.todoItem input[type='checkbox'] {
+	margin-top: 6px;
+}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Panel } from 'react-bootstrap';
+import './TodoApp.css';
+
 import uuid from 'node-uuid';
 import moment from 'moment';
 
@@ -72,15 +74,24 @@ class TodoApp extends Component {
 			searchInput
 		);
 		return (
-			<Panel header="Dcard Todo Application">
-				<TodoSearch
-					onSearch={this.handleSearch}
-					onCheckbox={this.handleCheckbox}
-					checked={this.state.showCompleted}
-				/>
-				<TodoList todos={filteredTodos} onToggle={this.handleToggle} />
-				<AddTodo onAddTodo={this.handleAddTodo} />
-			</Panel>
+			<div className="container text-center">
+				<div className="row">
+					<div className="container">
+						<div className="col-sm-10 col-md-6">
+							<div className="todoAppContainer">
+								<h1>DCard Todo Application</h1>
+								<TodoSearch
+									onSearch={this.handleSearch}
+									onCheckbox={this.handleCheckbox}
+									checked={this.state.showCompleted}
+								/>
+								<TodoList todos={filteredTodos} onToggle={this.handleToggle} />
+								<AddTodo onAddTodo={this.handleAddTodo} />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		);
 	}
 }

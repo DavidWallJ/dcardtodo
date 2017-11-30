@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './TodoSearch.css';
 import { Button, FormGroup, FormControl, Checkbox } from 'react-bootstrap';
 
 class TodoSearch extends Component {
@@ -16,7 +17,7 @@ class TodoSearch extends Component {
 
 	render() {
 		return (
-			<form>
+			<form className="todoSearchForm">
 				<FormGroup>
 					<FormControl
 						type="search"
@@ -25,9 +26,14 @@ class TodoSearch extends Component {
 						inputRef={input => (this.searchInput = input)}
 						onChange={this.handleSearch}
 					/>
-					<Checkbox checked={this.props.checked} onChange={this.handleCheckbox}>
-						Show completed todos
-					</Checkbox>
+					<div className="showCompletedCheckbox">
+						<Checkbox
+							checked={this.props.checked}
+							onChange={this.handleCheckbox}
+						>
+							Show completed todos
+						</Checkbox>
+					</div>
 				</FormGroup>
 			</form>
 		);

@@ -1,0 +1,12 @@
+form {
+	background-color: #f9f9f9;
+}
+
+.showCompletedCheckbox {
+	text-align: left;
+	padding-left: 1px;
+}
+
+.todoSearchForm input[type='checkbox'] {
+	margin-top: 2px;
+}

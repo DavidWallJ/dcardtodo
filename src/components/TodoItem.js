@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './TodoItem.css';
 import { Checkbox } from 'react-bootstrap';
 import moment from 'moment';
 
@@ -21,9 +22,10 @@ class TodoItem extends Component {
 	render() {
 		const { text, id, completed, createdAt, completedAt } = this.props;
 		return (
-			<div>
+			<div className="todoItem">
 				<Checkbox onChange={this.handleOnClick} checked={completed}>
-					{text} {this.renderDate(createdAt, completedAt, completed)}
+					<span className="todoTextSpan">{text}</span> <br />{' '}
+					{this.renderDate(createdAt, completedAt, completed)}
 				</Checkbox>
 			</div>
 		);
