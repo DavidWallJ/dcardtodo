@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './AddTodo.css';
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
+import * as actions from '../actions/actions';
 
 class AddTodo extends Component {
 	constructor() {
@@ -14,7 +16,8 @@ class AddTodo extends Component {
 		if (this.state.todoText.length > 0) {
 			this.setState({ todoText: '' });
 			this.todoTextRef.value = '';
-			this.props.onAddTodo(this.state.todoText);
+			// this.props.onAddTodo(this.state.todoText);
+			this.props.addTodo(this.state.todoText);
 		} else {
 			// puts cursor back in text input field if no text exists on submit
 			this.todoTextRef.focus();
@@ -41,4 +44,4 @@ class AddTodo extends Component {
 	}
 }
 
-export default AddTodo;
+export default connect(null, actions)(AddTodo);

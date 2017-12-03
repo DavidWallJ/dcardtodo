@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './TodoItem.css';
 import { Checkbox } from 'react-bootstrap';
 import moment from 'moment';
+import * as actions from '../actions/actions';
 
 class TodoItem extends Component {
 	handleOnClick = () => {
-		this.props.onToggle(this.props.id);
+		const { id } = this.props;
+		this.props.toggleTodo(id);
 	};
 
 	renderDate = (createdAt, completedAt, completed) => {
@@ -20,10 +23,10 @@ class TodoItem extends Component {
 		return message + moment.unix(timestamp).format('MMM Do YYYY @ h:mm a');
 	};
 	render() {
-		const { text, id, completed, createdAt, completedAt } = this.props;
+		const { text, completed, createdAt, completedAt } = this.props;
 		return (
 			<div className="todoItem">
-				<Checkbox onChange={this.handleOnClick} checked={completed}>
+				<Checkbox onChange={this.handleOnClick.bind(this)} checked={completed}>
 					<span className="todoTextSpan">{text}</span> <br />{' '}
 					{this.renderDate(createdAt, completedAt, completed)}
 				</Checkbox>
@@ -32,4 +35,4 @@ class TodoItem extends Component {
 	}
 }
 
-export default TodoItem;
+export default connect(null, actions)(TodoItem);

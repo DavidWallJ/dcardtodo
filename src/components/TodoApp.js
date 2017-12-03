@@ -24,20 +24,20 @@ class TodoApp extends Component {
 		TodoAPI.setTodos(this.state.todos);
 	};
 
-	handleAddTodo = text => {
-		this.setState({
-			todos: [
-				...this.state.todos,
-				{
-					id: uuid(),
-					text,
-					completed: false,
-					createdAt: moment().unix(),
-					completedAt: undefined
-				}
-			]
-		});
-	};
+	// handleAddTodo = text => {
+	// 	this.setState({
+	// 		todos: [
+	// 			...this.state.todos,
+	// 			{
+	// 				id: uuid(),
+	// 				text,
+	// 				completed: false,
+	// 				createdAt: moment().unix(),
+	// 				completedAt: undefined
+	// 			}
+	// 		]
+	// 	});
+	// };
 
 	handleSearch = searchInput => {
 		console.log('handleSearch: ', searchInput);
@@ -51,19 +51,6 @@ class TodoApp extends Component {
 		this.setState({
 			showCompleted: showCompleted
 		});
-	};
-
-	handleToggle = id => {
-		const updatedTodos = this.state.todos.map(todo => {
-			if (todo.id === id) {
-				todo.completed = !todo.completed;
-				// set completedAt date if todo.completed is true
-				todo.completedAt = todo.completed ? moment().unix() : undefined;
-			}
-			return todo;
-		});
-
-		this.setState({ todos: updatedTodos });
 	};
 
 	render() {
@@ -85,8 +72,8 @@ class TodoApp extends Component {
 									onCheckbox={this.handleCheckbox}
 									checked={this.state.showCompleted}
 								/>
-								<TodoList todos={filteredTodos} onToggle={this.handleToggle} />
-								<AddTodo onAddTodo={this.handleAddTodo} />
+								<TodoList />
+								<AddTodo />
 							</div>
 						</div>
 					</div>

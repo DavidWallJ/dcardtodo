@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import TodoItem from './TodoItem';
 
@@ -11,7 +12,7 @@ class TodoList extends Component {
 		return todos.map(todo => {
 			return (
 				<ListGroupItem key={todo.id}>
-					<TodoItem {...todo} onToggle={this.props.onToggle} />
+					<TodoItem {...todo} />
 				</ListGroupItem>
 			);
 		});
@@ -25,4 +26,8 @@ class TodoList extends Component {
 	}
 }
 
-export default TodoList;
+function mapStateToProps({ todos }) {
+	return { todos };
+}
+
+export default connect(mapStateToProps)(TodoList);
