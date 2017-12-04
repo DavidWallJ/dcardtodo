@@ -22,7 +22,7 @@ export default function(state = [], action) {
 					return {
 						...todo,
 						completed: toggledCompleted,
-						completedAt: toggledCompleted ? moment().unix : undefined
+						completedAt: toggledCompleted ? moment().unix() : undefined
 					};
 				} else {
 					return todo;
