@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import TodoItem from './TodoItem';
+import TodoAPI from '../api/TodoAPI';
 
 class TodoList extends Component {
 	renderTodos = () => {
-		const { todos } = this.props;
+		const { todos, toggleShowCompleted, searchInput } = this.props;
 		if (todos.length === 0) {
 			return <p>Nothing Scheduled To Do</p>;
 		}
-		return todos.map(todo => {
+		return TodoAPI.filterTodos(
+			todos,
+			toggleShowCompleted,
+			searchInput
+		).map(todo => {
 			return (
 				<ListGroupItem key={todo.id}>
 					<TodoItem {...todo} />
@@ -26,8 +31,8 @@ class TodoList extends Component {
 	}
 }
 
-function mapStateToProps({ todos }) {
-	return { todos };
+function mapStateToProps({ todos, toggleShowCompleted, searchInput }) {
+	return { toggleShowCompleted, searchInput, todos };
 }
 
 export default connect(mapStateToProps)(TodoList);

@@ -1,12 +1,14 @@
-export const setSearchText = searchText => {
+export const setSearchText = searchInput => {
 	return {
 		type: 'SET_SEARCH_TEXT',
-		searchText
+		searchInput
 	};
 };
 
-export const toggleShowComplete = () => {
-	type: 'TOGGLE_SHOW_COMPLETED';
+export const toggleShowCompleted = () => {
+	return {
+		type: 'TOGGLE_SHOW_COMPLETED'
+	};
 };
 
 export const addTodo = text => {

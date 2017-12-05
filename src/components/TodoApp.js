@@ -16,7 +16,8 @@ class TodoApp extends Component {
 		this.state = {
 			showCompleted: false,
 			searchInput: '',
-			todos: TodoAPI.getTodos()
+			todos: TodoAPI.getTodos(),
+			testing: 'testing'
 		};
 	}
 
@@ -55,6 +56,7 @@ class TodoApp extends Component {
 
 	render() {
 		const { todos, showCompleted, searchInput } = this.state;
+		console.log('at filter: ', searchInput);
 		const filteredTodos = TodoAPI.filterTodos(
 			todos,
 			showCompleted,

@@ -4,7 +4,7 @@ import toggleShowCompletedReducer from './toggleShowCompletedReducer';
 import todosReducer from './todosReducer';
 
 export default combineReducers({
-	searchText: searchTextReducer,
+	searchInput: searchTextReducer,
 	toggleShowCompleted: toggleShowCompletedReducer,
 	todos: todosReducer
 });

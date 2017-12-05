@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './TodoSearch.css';
 import { Button, FormGroup, FormControl, Checkbox } from 'react-bootstrap';
-
+import * as actions from '../actions/actions';
 class TodoSearch extends Component {
 	handleSearch = () => {
 		const searchInput = this.searchInput.value;
 		// this.searchInput.value = '';
 		// passed down from parent component
-		this.props.onSearch(searchInput);
-	};
-
-	handleCheckbox = e => {
-		const showCompleted = e.target.checked;
-		// passed down from parent component
-		this.props.onCheckbox(showCompleted);
+		this.props.setSearchText(searchInput);
 	};
 
 	render() {
@@ -29,8 +24,10 @@ class TodoSearch extends Component {
 					/>
 					<div className="showCompletedCheckbox">
 						<Checkbox
-							checked={this.props.checked}
-							onChange={this.handleCheckbox}
+							checked={this.props.toggleShowCompleted.value}
+							onChange={() => {
+								this.props.toggleShowCompleted();
+							}}
 						>
 							Show completed todos
 						</Checkbox>
@@ -41,4 +38,8 @@ class TodoSearch extends Component {
 	}
 }
 
-export default TodoSearch;
+function mapStateToProps({ toggleShowCompleted, searchInput }) {
+	return { toggleShowCompleted, searchInput };
+}
+
+export default connect(null, actions)(TodoSearch);
