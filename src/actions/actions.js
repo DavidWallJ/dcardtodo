@@ -31,3 +31,10 @@ export const toggleTodo = id => {
 		id
 	};
 };
+
+export const removeCompletedTodos = todos => {
+	return {
+		type: 'REMOVE_COMPLETED_TODOS',
+		todos
+	};
+};

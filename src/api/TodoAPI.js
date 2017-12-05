@@ -47,6 +47,17 @@ const APIFunctions = {
 			}
 		});
 		return filteredTodos;
+	},
+
+	deleteCompletedTodos(todos) {
+		var filteredTodos = todos;
+		// filter by showCompleted
+		filteredTodos = filteredTodos.filter(todo => {
+			// if todo.completed === false continue to show the todo OR if showCompleted === true continue to show todo
+			return todo.completed;
+		});
+
+		return filteredTodos;
 	}
 };
 

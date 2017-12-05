@@ -4,6 +4,7 @@ import './TodoApp.css';
 import TodoList from './TodoList';
 import AddTodo from './AddTodo';
 import TodoSearch from './TodoSearch';
+import RemoveCompletedTodos from './RemoveCompletedTodos';
 
 class TodoApp extends Component {
 	render() {
@@ -15,8 +16,10 @@ class TodoApp extends Component {
 							<div className="todoAppContainer">
 								<h1>DCard Todo Application</h1>
 								<TodoSearch />
+								<hr />
 								<TodoList />
 								<AddTodo />
+								<RemoveCompletedTodos />
 							</div>
 						</div>
 					</div>

@@ -10,6 +10,7 @@ class AddTodo extends Component {
 
 		this.state = { todoText: '' };
 	}
+
 	handleSubmit = e => {
 		e.preventDefault();
 

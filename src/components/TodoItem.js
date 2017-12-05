@@ -6,11 +6,9 @@ import moment from 'moment';
 import * as actions from '../actions/actions';
 
 class TodoItem extends Component {
-	handleOnClick = () => {
+	handleOnChange = () => {
 		const { id } = this.props;
-		setTimeout(() => {
-			this.props.toggleTodo(id);
-		}, 200);
+		this.props.toggleTodo(id);
 	};
 
 	renderDate = (createdAt, completedAt, completed) => {
@@ -28,7 +26,7 @@ class TodoItem extends Component {
 		const { text, completed, createdAt, completedAt } = this.props;
 		return (
 			<div className="todoItem">
-				<Checkbox onChange={this.handleOnClick.bind(this)} checked={completed}>
+				<Checkbox onChange={this.handleOnChange.bind(this)} checked={completed}>
 					<span className="todoTextSpan">{text}</span> <br />{' '}
 					{this.renderDate(createdAt, completedAt, completed)}
 				</Checkbox>

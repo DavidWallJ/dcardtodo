@@ -32,6 +32,13 @@ export default function(state = [], action) {
 		case 'ADD_TODOS':
 			return [...state, ...action.todos];
 
+		case 'REMOVE_COMPLETED_TODOS':
+			const uncompletedTodos = action.todos.filter(todo => {
+				// if todo.completed === false continue to show the todo OR if showCompleted === true continue to show todo
+				return !todo.completed;
+			});
+			return [...uncompletedTodos];
+
 		default:
 			return state;
 	}
