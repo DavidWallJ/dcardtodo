@@ -8,7 +8,9 @@ import * as actions from '../actions/actions';
 class TodoItem extends Component {
 	handleOnClick = () => {
 		const { id } = this.props;
-		this.props.toggleTodo(id);
+		setTimeout(() => {
+			this.props.toggleTodo(id);
+		}, 200);
 	};
 
 	renderDate = (createdAt, completedAt, completed) => {

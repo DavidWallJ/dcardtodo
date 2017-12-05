@@ -1,6 +1,5 @@
 const APIFunctions = {
 	setTodos(todos) {
-		console.log(Array.isArray(todos));
 		if (Array.isArray(todos)) {
 			localStorage.setItem('todos', JSON.stringify(todos));
 			// return original array if if fails

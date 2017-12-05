@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './TodoSearch.css';
 import { Button, FormGroup, FormControl, Checkbox } from 'react-bootstrap';
 import * as actions from '../actions/actions';
+
 class TodoSearch extends Component {
 	handleSearch = () => {
 		const searchInput = this.searchInput.value;
@@ -36,10 +37,6 @@ class TodoSearch extends Component {
 			</form>
 		);
 	}
-}
-
-function mapStateToProps({ toggleShowCompleted, searchInput }) {
-	return { toggleShowCompleted, searchInput };
 }
 
 export default connect(null, actions)(TodoSearch);
