@@ -6,6 +6,16 @@
 	font-size: 17px;
 }
 
+.todoItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.todoItemRight {
+	justify-content: space-between;
+}
+
 .todoItem input[type='checkbox'] {
 	margin-top: 6px;
 }

@@ -8,7 +8,12 @@ class TodoList extends Component {
 	renderTodos = () => {
 		const { todos, toggleShowCompleted, searchInput } = this.props;
 		if (todos.length === 0) {
-			return <p>Nothing Scheduled To Do</p>;
+			return (
+				<div>
+					<p>Nothing Scheduled To Do</p>
+					<hr />
+				</div>
+			);
 		}
 		return TodoAPI.filterTodos(
 			todos,
