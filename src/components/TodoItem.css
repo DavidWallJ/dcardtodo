@@ -19,3 +19,7 @@
 .todoItem input[type='checkbox'] {
 	margin-top: 6px;
 }
+
+.editTodoModal {
+	margin-top: 13%;
+}

@@ -5,6 +5,7 @@ import { Checkbox, Button, Modal, FormControl } from 'react-bootstrap';
 import moment from 'moment';
 import * as actions from '../actions/actions';
 import FaPencil from 'react-icons/lib/fa/pencil';
+import FaCheck from 'react-icons/lib/fa/check';
 
 class TodoItem extends Component {
 	constructor() {
@@ -20,7 +21,6 @@ class TodoItem extends Component {
 		const { todos, id } = this.props;
 		this.setState({ showModal: false });
 		this.props.editTodo(todos, id, this.state.editTodoInput);
-		// TodoAPI.editTodo(this.props.todos, this.props.id, this.state.editTodoInput);
 	}
 
 	open() {
@@ -63,7 +63,12 @@ class TodoItem extends Component {
 						<FaPencil />
 					</Button>
 				</div>
-				<Modal show={this.state.showModal} onHide={this.close}>
+				<Modal
+					show={this.state.showModal}
+					onHide={this.close}
+					backdrop="startic"
+					className="editTodoModal"
+				>
 					<Modal.Header>
 						<Modal.Title>Edit Todo</Modal.Title>
 					</Modal.Header>
@@ -77,7 +82,9 @@ class TodoItem extends Component {
 						/>
 					</Modal.Body>
 					<Modal.Footer>
-						<Button onClick={this.close.bind(this)}>Close</Button>
+						<Button onClick={this.close.bind(this)}>
+							<FaCheck />
+						</Button>
 					</Modal.Footer>
 				</Modal>
 			</div>

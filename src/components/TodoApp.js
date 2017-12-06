@@ -23,7 +23,7 @@ class TodoApp extends Component {
 							</div>
 						</div>
 					</div>
-					<p>Designed by David J. Wall</p>
+					<p className="signature">Designed by David J. Wall</p>
 				</div>
 			</div>
 		);
