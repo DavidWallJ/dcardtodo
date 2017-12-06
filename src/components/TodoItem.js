@@ -37,6 +37,14 @@ class TodoItem extends Component {
 		this.open();
 		// console.log(this.props.text);
 	};
+
+	// when enter is pressed inside edit todo modal the modal will close and the close function will run
+	handleKeyPress = target => {
+		if (target.charCode == 13) {
+			this.close();
+		}
+	};
+
 	renderDate = (createdAt, completedAt, completed) => {
 		let message = 'Created: ';
 		let timestamp = createdAt;
@@ -66,26 +74,28 @@ class TodoItem extends Component {
 				<Modal
 					show={this.state.showModal}
 					onHide={this.close}
-					backdrop="startic"
+					backdrop="static"
 					className="editTodoModal"
 				>
-					<Modal.Header>
-						<Modal.Title>Edit Todo</Modal.Title>
-					</Modal.Header>
 					<Modal.Body>
-						<FormControl
-							className="editTodoInput"
-							type="text"
-							value={this.state.editTodoInput}
-							onChange={event =>
-								this.setState({ editTodoInput: event.target.value })}
-						/>
+						<div className="modalContainer">
+							<h4>Todo:</h4>
+							<FormControl
+								className="editTodoInput"
+								type="text"
+								value={this.state.editTodoInput}
+								onChange={event =>
+									this.setState({ editTodoInput: event.target.value })}
+								onKeyPress={this.handleKeyPress}
+							/>
+							<Button
+								className="modalCheckButton"
+								onClick={this.close.bind(this)}
+							>
+								<FaCheck />
+							</Button>
+						</div>
 					</Modal.Body>
-					<Modal.Footer>
-						<Button onClick={this.close.bind(this)}>
-							<FaCheck />
-						</Button>
-					</Modal.Footer>
 				</Modal>
 			</div>
 		);

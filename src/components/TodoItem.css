@@ -23,3 +23,17 @@
 .editTodoModal {
 	margin-top: 13%;
 }
+
+.modalContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modalContainer h4 {
+	margin: 10px;
+}
+
+.modalCheckButton {
+	margin: 10px;
+}
