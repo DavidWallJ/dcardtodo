@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import './TodoItem.css';
 import { Checkbox, Button, Modal, FormControl } from 'react-bootstrap';
@@ -18,7 +17,10 @@ class TodoItem extends Component {
 	}
 
 	close() {
+		const { todos, id } = this.props;
 		this.setState({ showModal: false });
+		this.props.editTodo(todos, id, this.state.editTodoInput);
+		// TodoAPI.editTodo(this.props.todos, this.props.id, this.state.editTodoInput);
 	}
 
 	open() {
@@ -31,8 +33,9 @@ class TodoItem extends Component {
 	};
 
 	handleOnClick = () => {
+		this.setState({ editTodoInput: this.props.text });
 		this.open();
-		console.log(this.props.text);
+		// console.log(this.props.text);
 	};
 	renderDate = (createdAt, completedAt, completed) => {
 		let message = 'Created: ';
@@ -82,4 +85,8 @@ class TodoItem extends Component {
 	}
 }
 
-export default connect(null, actions)(TodoItem);
+function mapStateToProps({ todos }) {
+	return { todos };
+}
+
+export default connect(mapStateToProps, actions)(TodoItem);

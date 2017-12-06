@@ -30,7 +30,7 @@ class AddTodo extends Component {
 					<FormControl
 						className="todoInput"
 						type="text"
-						placeholder="...add your todo here"
+						placeholder="Add your todo here..."
 						onChange={event => this.setState({ todoText: event.target.value })}
 						// ref to move cursor back to if field is empty when submitted
 						inputRef={input => (this.todoTextRef = input)}

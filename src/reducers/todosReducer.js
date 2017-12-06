@@ -39,6 +39,22 @@ export default function(state = [], action) {
 			});
 			return [...uncompletedTodos];
 
+		case 'EDIT_TODO':
+			const editedTodos = action.todos.map(todo => {
+				const { text, id } = action;
+				if (todo.id === action.id) {
+					return {
+						...todo,
+						text,
+						id
+					};
+				} else {
+					return todo;
+				}
+			});
+
+			return [...editedTodos];
+
 		default:
 			return state;
 	}

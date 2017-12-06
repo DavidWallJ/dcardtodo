@@ -14,7 +14,7 @@ class TodoApp extends Component {
 					<div className="container">
 						<div className="col-sm-10 col-md-6">
 							<div className="todoAppContainer">
-								<h1>DCard Todo Application</h1>
+								<h1>Dcard Todo Application</h1>
 								<TodoSearch />
 								<hr />
 								<TodoList />
@@ -23,6 +23,7 @@ class TodoApp extends Component {
 							</div>
 						</div>
 					</div>
+					<p>Designed by David J. Wall</p>
 				</div>
 			</div>
 		);

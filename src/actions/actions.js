@@ -38,3 +38,12 @@ export const removeCompletedTodos = todos => {
 		todos
 	};
 };
+
+export const editTodo = (todos, id, text) => {
+	return {
+		type: 'EDIT_TODO',
+		todos,
+		id,
+		text
+	};
+};
